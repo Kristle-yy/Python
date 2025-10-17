@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block body %} 
+<h1>List</h1>
+{% for i in info %}
+
+Name : {{ i.name }}
+<br>
+Email : {{ i.email }}
+<br>
+Phone : {{ i.phone }}
+<br>
+<hr>
+{% endfor %}
+
+<h1>Create</h1>
+
+
+    <form action="" method="POST">
+   
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        <br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <br>
+
+        <label for="phone">Phone:</label><br>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+        <br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+{% endblock %}
